@@ -145,6 +145,11 @@ return [
 		'Doenerbank\Providers\EventServiceProvider',
 		'Doenerbank\Providers\RouteServiceProvider',
 
+		/*
+		 * Other Providers
+		 */
+		//'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+
 	],
 
 	/*

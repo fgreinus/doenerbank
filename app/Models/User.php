@@ -1,4 +1,4 @@
-<?php namespace Doenerbank;
+<?php namespace Doenerbank\Models;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -30,5 +30,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 * @var array
 	 */
 	protected $hidden = ['password', 'remember_token'];
+
+	public function orderDays()
+	{
+		return $this->hasMany('OrderDay', 'manager_id', 'id');
+	}
 
 }

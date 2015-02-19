@@ -28,7 +28,7 @@ return [
 	|
 	*/
 
-	'model' => 'Doenerbank\User',
+	'model' => 'Doenerbank\Models\User',
 
 	/*
 	|--------------------------------------------------------------------------

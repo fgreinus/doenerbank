@@ -1,6 +1,6 @@
 <?php namespace Doenerbank\Services;
 
-use Doenerbank\User;
+use Doenerbank\Models\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 
