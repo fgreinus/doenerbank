@@ -3,10 +3,10 @@
 use Doenerbank\Http\Requests;
 use Doenerbank\Http\Controllers\Controller;
 
-use Doenerbank\Models\OrderDay;
+use Doenerbank\Models\Order;
 use Illuminate\Http\Request;
 
-class OrderDayController extends Controller {
+class OrderController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -15,9 +15,9 @@ class OrderDayController extends Controller {
 	 */
 	public function getIndex()
 	{
-		$orderDays = OrderDay::with('manager')
+		$orderDays = Order::with('allocated_user')
 			->get();
 
-		return view('admin/orderday/index', ['orderDays' => $orderDays]);
+		return view('admin/oders/index', ['orders' => $orderDays]);
 	}
 }
